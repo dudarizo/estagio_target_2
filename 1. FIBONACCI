@@ -1,0 +1,32 @@
+# Eu sei que não precisava da parte da sequência de Fibomacci até o número mais próximo da sequência de Fibonacci, mas achei legal de incluir porque quando 
+# eu estava testando fiquei curiosa pra saber se meus testes estavam corretos ou não. 
+# Eu me inscrevi em duas vagas na Target, e na outra eles pediram pra fazer o mesmo código, dai só copiei, mas pelos meus testes ele está correto. 
+
+def pertence_fibonacci(numero):
+    # Função para verificar se um número pertence à sequência de Fibonacci
+    a, b = 0, 1
+    sequencia = [a]  # Lista para armazenar a sequência de Fibonacci
+
+    while a <= numero:
+        sequencia.append(a)
+        if a == numero:
+            return True, sequencia
+        a, b = b, a + b
+
+    return False, sequencia
+
+# Entrada do número a ser verificado
+numero = int(input("Digite um número para verificar se pertence à sequência de Fibonacci: "))
+
+# Checa se o número está na sequência e obtém a sequência
+pertence, sequencia = pertence_fibonacci(numero)
+
+# Imprime a sequência de Fibonacci
+print("Sequência de Fibonacci até o número mais próximo:")
+print(sequencia)
+
+# Imprime se o número pertence ou não à sequência
+if pertence:
+    print(f"O número {numero} pertence à sequência de Fibonacci.")
+else:
+    print(f"O número {numero} NÃO pertence à sequência de Fibonacci.")
