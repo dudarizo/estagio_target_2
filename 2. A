@@ -1,0 +1,16 @@
+def contar_letra_a(s):
+    # Contar ocorrências de 'a' ou 'A' na string
+    return s.lower().count('a')
+
+# Entrada da string a ser verificada
+string = input("Digite uma string para verificar a presença da letra 'a': ")
+
+# Contagem das ocorrências
+quantidade = contar_letra_a(string)
+
+# Verificação e impressão do resultado
+if quantidade > 0:
+    print(f"A letra 'a' aparece {quantidade} vez(es) na string.")
+else:
+    print("A letra 'a' não aparece na string.")
+ 
